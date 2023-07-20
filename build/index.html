@@ -5,25 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Easy Bank</title>
     <link href="/dist/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="/dist/bp.css">
 </head>
 <body>
     <header class="flex justify-between px-6 py-6 items-center">
         <div class="logo"><img src="/assets/images/logo.svg" alt=""></div>
-        <nav>
-            <ul class="flex gap-8 font-mono text-gray-400 ">
+        <div class="hidden w-full md:flex md:items-center md:w-auto nav" id="menu">
+            <ul class="md:flex mr-[40px] gap-8 font-mono text-gray-400 ">
                 <li class="hover:text-gray-800"><a href="">Home</a></li>
                 <li class="hover:text-gray-800"><a href="">About</a></li>
                 <li class="hover:text-gray-800"><a href="">Contact</a></li>
                 <li class="hover:text-gray-800"><a href="">Blog</a></li>
                 <li class="hover:text-gray-800"><a href="">Careers</a></li>
             </ul>
-        </nav>
-        <button class="bg-gradient-to-r from-[#30cd7b] to-[#2bb9cc] text-white font-bold rounded-full w-48 h-11 mr-8">Request Invite</button>
+            <button class="bg-gradient-to-r from-[#30cd7b] to-[#2bb9cc] text-white font-bold rounded-full w-48 h-11 mr-8">Request Invite</button>
+        </div>
+        <img class="h-6 w-6 cursor-pointer md:hidden block" id="menu-button" src="/assets/images/icon-hamburger.svg" alt="">
+        
     </header>
 
     <!-- HERO SECTION -->
-    <section class=" max-sm:flex-col-reverse px-[50px] bg-[length:63%_89%] bg-no-repeat bg-right-top flex gap-[100px] justify-center " style="background-image: url(/assets/images/bg-intro-desktop.svg)">
-        <div  class="pt-[150px]   ">
+    <section class="hero max-sm:flex-col-reverse px-[50px] bg-[length:63%_89%] bg-no-repeat bg-right-top flex gap-[100px] justify-center " style="background-image: url(/assets/images/bg-intro-desktop.svg)">
+        <div  class="md:pt-[150px]   ">
             <h1 class="font-bold " style="font-size: calc(1.1rem + 1.5vw);">Next generation <br>digital banking</h1>
             <p class="mt-5 mb-5 text-gray-500 ">
                 Take your financial life online. Your Easybank account <br> will be a one-stop-shop 
@@ -37,13 +40,13 @@
     </section>
 
     <!-- FEATURES -->
-    <section class="py-14 px-8 bg-[#f2f4f6]">
+    <section class="py-14 px-8 bg-[#f2f4f6] features">
         <div>
             <h1 class="font-semibold text-2xl">Why choose Easybank?</h1>
             <p class="text-gray-500">We leverage Open Banking to turn your bank account into your financial hub. <br> Control 
                 your finances like never before.</p>
         </div>
-        <div class="flex gap-10 my-10">
+        <div class="flex feat-card gap-10 my-10">
             <div class="card">
                 <img src="/assets/images/icon-online.svg" alt="">
                 <div class="my-2.5 font-semibold text-lg">Online Banking</div>
@@ -153,6 +156,7 @@
             </div>
             
         </div>
+        
         <div class="subg2 flex leading-loose gap-[80px]">
             <nav>
                 <ul>
@@ -175,5 +179,17 @@
             <p class="text-gray-500 text-sm">Easybank. All Rights Reserved</p>
         </div>
     </footer>
+
+    <!-- HAMBUGGER   -->
+    <script>
+        const button = document.querySelector('#menu-button');
+const menu = document.querySelector('#menu');
+
+
+button.addEventListener('click', () => {
+  menu.classList.toggle('hidden');
+});
+
+    </script>
 </body>
 </html>

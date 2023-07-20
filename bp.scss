@@ -1,0 +1,97 @@
+
+
+
+// $breakpoint-xsmall: 320px;
+// $breakpoint-small: 576px;
+// $breakpoint-medium: 768px;
+// $breakpoint-large: 1024px;
+// $breakpoint-extra-large: 1300px;
+
+// TABLET
+
+// @mixin tabletscreen {
+//     @media and (min-width: 768px) and (max-width: 1023px) { @content; }
+// }
+
+
+// MOBILE SCREEN
+
+// @mixin mobilescreen {
+//     @media (max-width: 767px) {
+//     @content;
+//     }
+// }
+
+// We define the mixins for two major breakpoints mobile and tablet
+ 
+ // $breakpoint is the variable that can have several values
+ @mixin devices ($breakpoint) { //the name of the mixin is devices
+  
+    @if $breakpoint == tablet {    
+    @media only screen and (min-width: 768px) and (max-width: 1023px) {
+      @content;
+    }
+  }
+ 
+  @if $breakpoint == mobile {
+    @media only screen and (max-width: 767px) {
+      @content;
+    }
+  }
+}
+
+
+// Handling the responsiveness
+// .responsive {
+//     background: yellow;
+//   // The normal background color is set to yellow
+ 
+//   @include devices(tablet) {
+//         background: lightblue;
+//         // code set for tablet
+//     }
+ 
+//   @include devices(mobile) {
+//         background: aquamarine;
+//         h1{
+//             color: red;
+//         }
+//         // code set for mobile    
+//     }
+// }
+
+
+//  BREAKPOINS TABLE
+
+
+@include devices(mobile) {
+    body{
+        // background-color: red;
+    }
+
+    .hero{
+        background-image: url(/assets/images/bg-intro-mobile.svg);
+        align-items: center;
+        text-align: center;
+        margin-bottom: 30px;
+        gap: 10px;
+        p{
+            font-size: 13px;
+            line-height: 18px;
+        }
+    }
+
+    .features{
+        text-align: center;
+        padding: 60px;
+    }
+    .feat-card {
+        display: grid;
+        img{
+            margin: 0 auto;
+        }
+        p{
+            font-size: 12px;
+        }
+    }
+}
