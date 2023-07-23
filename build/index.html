@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="/dist/bp.css">
 </head>
 <body>
-    <header class="flex justify-between px-6 py-6 items-center">
+    <header class="flex  justify-between px-6 py-6 items-center">
         <div class="logo"><img src="/assets/images/logo.svg" alt=""></div>
-        <div class="hidden w-full md:flex md:items-center md:w-auto nav" id="menu">
-            <ul class="md:flex mr-[40px] gap-8 font-mono text-gray-400 ">
+        <div class="hidden w-full  md:flex md:items-center md:w-auto nav" id="menu">
+            <ul class="md:flex md:mr-14 gap-8 font-mono text-gray-400 ">
                 <li class="hover:text-gray-800"><a href="">Home</a></li>
                 <li class="hover:text-gray-800"><a href="">About</a></li>
                 <li class="hover:text-gray-800"><a href="">Contact</a></li>
@@ -20,12 +20,12 @@
             </ul>
             <button class="bg-gradient-to-r from-[#30cd7b] to-[#2bb9cc] text-white font-bold rounded-full w-48 h-11 mr-8">Request Invite</button>
         </div>
-        <img class="h-6 w-6 cursor-pointer md:hidden block" id="menu-button" src="/assets/images/icon-hamburger.svg" alt="">
+        <img class="h-6 w-6 cursor-pointer fixed md:hidden block" id="menu-button" src="/assets/images/icon-hamburger.svg" alt="">
         
     </header>
 
     <!-- HERO SECTION -->
-    <section class="hero max-sm:flex-col-reverse px-[50px] bg-[length:63%_89%] bg-no-repeat bg-right-top flex gap-[100px] justify-center " style="background-image: url(/assets/images/bg-intro-desktop.svg)">
+    <section class="hero max-sm:flex-col-reverse px-[50px] bg-[length:63%_89%] bg-no-repeat bg-right-top flex gap-[100px] justify-center md:bg-hero-desktop bg-hero-mobile" >
         <div  class="md:pt-[150px]   ">
             <h1 class="font-bold " style="font-size: calc(1.1rem + 1.5vw);">Next generation <br>digital banking</h1>
             <p class="mt-5 mb-5 text-gray-500 ">
@@ -91,7 +91,7 @@
     <!-- ARTICLES SECTON -->
     <section class="px-8 py-10">
         <h1 class="my-6 font-semibold text-2xl">Latest Articles</h1>
-        <div class="flex gap-9">
+        <div class="md:flex grid gap-9">
             <div class="card">
                 <img src="/assets/images/image-currency.jpg" alt="">
                 <div class="author my-[10px] text-gray-700 text-sm">By Claire Robinson</div>
@@ -140,7 +140,7 @@
     </section>
 
     <!-- FOOTER -->
-    <footer class="flex justify-evenly bg-[#2D314D] py-[45px] text-gray-200">
+    <footer class="feat-card gap-10 my-10 flex justify-evenly bg-[#2D314D] py-[45px] text-gray-200">
         <div class="grid1">
             <div class="subg1 grid">
                 <div class="">
